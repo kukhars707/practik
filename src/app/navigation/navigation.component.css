@@ -1,0 +1,17 @@
+.nav{
+	background-color: #dd0031;
+	height: 80px;
+}
+.nav li a{
+	color: #fff;
+	margin: 20px 10px;
+	transition: .15s;
+}
+
+.nav li a:hover{
+	background-color: inherit;
+	opacity: .6; 
+}
+.nav li a:focus{
+	background-color: inherit;
+}

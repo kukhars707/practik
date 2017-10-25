@@ -1,0 +1,13 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<h2>Админка</h2>
+		</div>
+		<div class="col-md-6">
+			<div *ngIf="authService.isLoggedIn">
+				<button type="submit" class="btn btn-default" (click)='logout()'>Выход</button>
+			</div>
+		</div>
+	</div>
+</div>
+<app-catalog-admin></app-catalog-admin>

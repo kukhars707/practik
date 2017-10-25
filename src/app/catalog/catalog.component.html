@@ -1,0 +1,40 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Каталог</h2>
+		</div>
+	</div>
+	<div class="row">
+			<div class="col-md-4" *ngFor="let item of getCatalog()">
+				<div class="product">
+					<div class="image">
+						<img src="" alt="Картинка">
+					</div>
+					<div class="title">
+						<h4>{{item.title}}</h4>
+					</div>
+					<div class="price">
+						<h5>Цена: {{item.price}} грн.</h5>
+					</div>
+					<button class="btn btn-success">To cart</button>
+				</div>
+			</div>
+	</div>
+
+	<div class="form-inline pull-xs-left m-r-1">
+		<select class="form-control" [value]="productPerPage"
+		(change)="changePageSize($event.target.value)">
+			<option value="3">3 per page</option>
+			<option value="4">4 per page</option>
+			<option value="6">6 per page</option>
+			<option value="8">8 per page</option>
+		</select>
+	</div>
+	<div class="btn-group pull-xs-right">
+		<button *ngFor="let page of getPageNumbers()" (click)="changePage(page)"
+		class="btn btn-outline-primary" [class.active]="page == seletedPage">
+			{{page}}
+		</button>
+	</div>
+
+</div>

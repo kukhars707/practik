@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<button class="btn btn-success" (click)="createProduct()">Добавить</button>
+		</div>
+		<div class="col-md-12">
+			<table class="table">
+				<thead>
+					<th>Name</th>
+					<th>Price</th>
+					<th></th>
+				</thead>
+				<tbody>
+					<tr *ngFor="let product of catalog">
+						<td>{{product.title}}</td>
+						<td>{{product.price}}</td>
+						<td>
+							<button class="btn" (click)="editProduct(product)">Edit</button>
+							<button class="btn btn-danger" (click)="deleteProduct(product)">Delete</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

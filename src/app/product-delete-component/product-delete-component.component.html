@@ -1,0 +1,13 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+
+			<h4>Вы собираетесь удалить слудующую запись:</h4>
+			<p><strong>Name:</strong> {{currentProduct?.title}}</p>
+			<p><strong>Price:</strong> {{currentProduct?.price}}</p>
+
+			<button class="btn btn-default" (click)="goBack()">Cancel</button>
+			<button class="btn btn-danger" (click)="deleteProduct()">Delete</button>
+		</div>
+	</div>
+</div>
