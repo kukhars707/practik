@@ -1,16 +1,18 @@
+//Модули приложния
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
- 
+//Главный компонент
 import { AppComponent } from './app.component';
-import { CatalogComponent } from './catalog/catalog.component';
-
+//Сервисы
 import { CatalogService } from './catalog.service';
 import { AuthService } from './auth.service';
 import { AuthGuardService } from './auth-guard.service';
-
+import { CartService } from './cart.service';
+//Пользовательские компоненты
+import { CatalogComponent } from './catalog/catalog.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { AdminComponent } from './admin/admin.component';
@@ -18,6 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { CatalogAdminComponent } from './catalog-admin/catalog-admin.component';
 import { ProductDeleteComponentComponent } from './product-delete-component/product-delete-component.component';
 import { AddEditComponent } from './add-edit/add-edit.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,7 @@ import { AddEditComponent } from './add-edit/add-edit.component';
     CatalogAdminComponent,
     ProductDeleteComponentComponent,
     AddEditComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +57,7 @@ import { AddEditComponent } from './add-edit/add-edit.component';
     CatalogService,
     AuthGuardService,
     AuthService,
+    CartService
   ],
   bootstrap: [AppComponent]
 })

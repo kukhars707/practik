@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-	background-color: #f6f6f6;
-	height: auto;
+
+body {
+    background-color: #f6f6f6;
+    min-height: 600px;
+}
+
+app-catalog {
+    min-height: 500px;
+    display: block;
 }
